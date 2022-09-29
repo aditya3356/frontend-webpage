@@ -9,24 +9,70 @@ import chat from "./images/comments-alt.png";
 import commonCompanyLogo from "./images/Logo.png";
 
 const items = [
-  { name: "Dashboard", icon: home, selected: true, dropdown: [] },
-  { name: "Intels", icon: star, selected: false, dropdown: [] },
-  { name: "Leads", icon: user, selected: false, dropdown: [] },
+  {
+    name: "Dashboard",
+    icon: home,
+    selected: true,
+    dropdown: [],
+    unread: 0,
+    unseen: 0,
+  },
+  {
+    name: "Intels",
+    icon: star,
+    selected: false,
+    dropdown: [],
+    unread: 4,
+    unseen: 0,
+  },
+  {
+    name: "Leads",
+    icon: user,
+    selected: false,
+    dropdown: [],
+    unread: 0,
+    unseen: 4,
+  },
   {
     name: "Accounts",
     icon: building,
     selected: false,
     dropdown: ["Manage all", "Track new accounts", "Bulk Import"],
+    unread: 0,
+    unseen: 0,
   },
   {
     name: "Preferences",
     icon: settings,
     selected: false,
     dropdown: ["Product Focus", "Intel Preferences", "Lead Persona"],
+    unread: 0,
+    unseen: 0,
   },
-  { name: "Integrations", icon: link, selected: false, dropdown: [] },
-  { name: "Team", icon: users, selected: false, dropdown: [] },
-  { name: "Help/Support", icon: chat, selected: false, dropdown: [] },
+  {
+    name: "Integrations",
+    icon: link,
+    selected: false,
+    dropdown: [],
+    unread: 0,
+    unseen: 0,
+  },
+  {
+    name: "Team",
+    icon: users,
+    selected: false,
+    dropdown: [],
+    unread: 0,
+    unseen: 0,
+  },
+  {
+    name: "Help/Support",
+    icon: chat,
+    selected: false,
+    dropdown: [],
+    unread: 0,
+    unseen: 0,
+  },
 ];
 
 const sampleOrgs = [

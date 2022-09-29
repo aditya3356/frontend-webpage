@@ -29,8 +29,8 @@ const Sidebar = () => {
         />
         <div className="ml-[22px] font-bold text-[22px]">B2Brain</div>
       </div>
-      {items.map((item) => (
-        <div className="mb-5">
+      {items.map((item, idx) => (
+        <div key={idx} className="mb-5">
           <div
             className={`flex justify-between items-center cursor-${
               item.dropdown.length ? "pointer" : "normal"
@@ -63,6 +63,16 @@ const Sidebar = () => {
                 alt="chevron"
               />
             ) : null}
+            {item.unread !== 0 ? (
+              <div className="w-[57px] h-4 bg-[#FF7474] rounded-[22px] flex justify-center items-center text-white text-[10px] font-bold">
+                {item.unread} unread
+              </div>
+            ) : null}
+            {item.unseen !== 0 ? (
+              <div className="w-[57px] h-4 bg-[#FF7474] rounded-[22px] flex justify-center items-center text-white text-[10px] font-bold">
+                {item.unseen} unseen
+              </div>
+            ) : null}
           </div>
           {(item.name === "Accounts" && accountsDropdown) ||
           (item.name === "Preferences" && preferencesDropdown) ? (
@@ -72,9 +82,14 @@ const Sidebar = () => {
                 src={verticalRule}
                 alt="vertical-rule"
               />
-              <div>
-                {item.dropdown.map((name) => (
-                  <div className="ml-[17px] text-sm opacity-60">{name}</div>
+              <div className="ml-6">
+                {item.dropdown.map((name, idx) => (
+                  <div
+                    key={idx}
+                    className="text-sm flex opacity-60 leading-[29px]"
+                  >
+                    {name}
+                  </div>
                 ))}
               </div>
             </div>

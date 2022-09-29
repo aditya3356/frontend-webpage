@@ -1,5 +1,7 @@
 import search from "../../images/search.png";
 import times from "../../images/times.png";
+import bell from "../../images/bell.png";
+import logoHarrow from "../../images/Logo_Harrow.png";
 
 const Searchbar = ({
   searchValue,
@@ -27,6 +29,10 @@ const Searchbar = ({
         onChange={searchValueChangeHandler}
         onFocus={() => setSearchSelected(true)}
       />
+      <div className="absolute ml-[1119px] flex items-center">
+        <img src={bell} className="w-[29px] h-[29px]" />
+        <img src={logoHarrow} className="w-[25px] h-[25px] ml-2" />
+      </div>
     </div>
   );
 };
